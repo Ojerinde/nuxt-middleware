@@ -20,6 +20,10 @@ const login = () => {
       user.name.toLowerCase() === loginForm.value.name.toLowerCase() &&
       user.password.toLowerCase() === loginForm.value.password.toLowerCase()
   );
+
+  // Store authentication result
+  localStorage.setItem("isAuthenticated", true);
+  
   if (verifiedUser) router.push("/profile");
 };
 </script>
